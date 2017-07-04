@@ -22,4 +22,9 @@ class TestBear < MiniTest::Test
     @bear.take_fish_from_river(@river)
     assert_equal(@cod,@bear.stomach()[0])
   end
+
+  def test_roar()
+    roar = @bear.roar()
+    assert_equal("Rawr", roar)
+  end
 end

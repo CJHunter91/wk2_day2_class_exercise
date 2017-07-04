@@ -13,4 +13,8 @@ class Bear
     @stomach << river.lose_fish()
   end
 
+  def roar()
+    return "Rawr"
+  end
+
 end 
