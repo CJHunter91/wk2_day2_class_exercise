@@ -3,10 +3,12 @@ require_relative('./fish.rb')
 
 class River
   attr_reader :name, :fishes
-    def initialize(name)
+    def initialize(name, fishes)
       @name = name
-      @fishes = [Fish.new('Salmon'), Fish.new('Cod')]
+      @fishes = fishes
     end
 
-
+    def lose_fish()
+      return @fishes.pop
+    end
 end 
