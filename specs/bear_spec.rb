@@ -9,4 +9,5 @@ class TestBear < MiniTest::Test
     bear = Bear.new("Yogi")
     assert_equal("Yogi", bear.name())
   end
+
 end
