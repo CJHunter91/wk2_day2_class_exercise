@@ -10,7 +10,8 @@ class Bear
     end
 
   def take_fish_from_river(river)
-    @stomach << river.lose_fish()
+    fish = river.lose_fish()
+    @stomach.push(fish) if !fish.nil?
   end
 
   def roar()

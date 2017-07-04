@@ -20,6 +20,7 @@ class TestBear < MiniTest::Test
   end
 
   def test_take_fish_from_river()
+    
     @bear.take_fish_from_river(@river)
     assert_equal(@cod,@bear.stomach()[0])
   end
@@ -32,5 +33,12 @@ class TestBear < MiniTest::Test
   def test_food_count()
     @bear.take_fish_from_river(@river)
     assert_equal(1, @bear.food_count())
+  end
+
+  def test_take_fish__from_empty_river
+    nile = River.new('Nile', [])
+    @bear.take_fish_from_river(nile)
+    assert_equal(0, @bear.food_count())
+
   end
 end
