@@ -11,4 +11,8 @@ class River
     def lose_fish()
       return @fishes.pop
     end
+
+    def fish_count()
+      return @fishes.count()
+    end
 end 
