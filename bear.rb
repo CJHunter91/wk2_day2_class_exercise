@@ -17,4 +17,7 @@ class Bear
     return "Rawr"
   end
 
+  def food_count()
+    return @stomach.count()
+  end
 end 
